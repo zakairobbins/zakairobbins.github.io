@@ -2,33 +2,74 @@ body {
     font-family: 'Vollkorn', serif;
     background-color: #F3D5BC;
 }
-header {
-background-color: #E4771C;
 
+header {
+  background-color: #E4771C;
+  border:1px solid black;
 }
+
 header h1{
   display: inline-block;
-  border:1px solid black;
+  /*border:1px solid black;*/
   float:left;
+  margin-left: 20px;
 }
+
 header h3 {
   display: inline-block;
   float:right;
-  margin-top:34px;
+  margin-top:32px;
+  margin-right: 20px;
 }
+
 nav {
-  border:1px solid;
   clear:both;
   display: block;
 }
-nav ul {
-  margin-left: 12%
-}
-nav li {
+
+nav section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
   background-color: #387674;
-  padding: 4px;
+}
+
+nav p {
+  margin: 0px;
+  border: 1px solid;
+  font-size: 1.5em;
+  text-align: center;
+  flex-grow: 1;
+  padding: 0px;
   border: 2px solid #225F59;
   border-radius: 4px;
   display: inline-block;
-  margin:-5px 40px 1px 35px
+}
+
+#about-me {
+  display: block;
+  border: 1px solid;
+  height: 15em;
+}
+
+#about-me figure {
+  float: left;
+}
+
+figcaption p {
+  display: inline-block;
+}
+
+#greeting {
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+}
+#greeting span {
+  margin-right: .7em;
+}
+
+#portfolio {
+  clear: both;
 }
