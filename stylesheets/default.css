@@ -75,7 +75,7 @@ nav section {
   border: 2px solid #225F59;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  height: 27em;
+  height: 28em;
 }
 #about-me img {
   max-height: 349px;
@@ -109,6 +109,7 @@ figcaption p {
 }
 
 #portfolio {
+  margin-top: 1em;
   clear: both;
   background-color: #1E4B6F;
   color: #F3D5BC;
