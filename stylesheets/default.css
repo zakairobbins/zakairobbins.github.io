@@ -142,3 +142,7 @@ h4 {
 article {
   color: #F3D5BC;
 }
+
+#blog-title {
+  text-align: center;
+}
