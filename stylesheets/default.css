@@ -1,14 +1,30 @@
 body {
     font-family: 'Vollkorn', serif;
-    background-color: #F3D5BC;
+    background-color: #080819;
+    margin: 2em;
+}
+
+a:link {
+  color:#E4771C;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FF491A;
+}
+a:hover {
+  color: #F4872C;
 }
 
 header {
   background-color: #E4771C;
-  border:1px solid black;
+  border:2px solid #225F59;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 header h1{
+  color: #080819;
   display: inline-block;
   /*border:1px solid black;*/
   float:left;
@@ -16,6 +32,7 @@ header h1{
 }
 
 header h3 {
+  color: #080819;
   display: inline-block;
   float:right;
   margin-top:32px;
@@ -35,9 +52,8 @@ nav section {
   background-color: #387674;
 }
 
-nav p {
+.nav-links  {
   margin: 0px;
-  border: 1px solid;
   font-size: 1.5em;
   text-align: center;
   flex-grow: 1;
@@ -46,15 +62,33 @@ nav p {
   border-radius: 4px;
   display: inline-block;
 }
+.nav-links:link {
+  color: #080819;
+}
+.nav-links:visited {
+  color: #080819;
+}
 
 #about-me {
   display: block;
-  border: 1px solid;
-  height: 15em;
+  background-color:#F3D5BC;
+  border: 2px solid #225F59;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 27em;
+}
+#about-me img {
+  max-height: 349px;
+  overflow: hidden;
 }
 
 #about-me figure {
   float: left;
+  text-align: center;
+  background-color: #1E4B6F;
+  padding: 3px;
+  border: 2px solid #F06F1C;
+  border-radius: 4px;
 }
 
 figcaption p {
@@ -62,9 +96,13 @@ figcaption p {
 }
 
 #greeting {
+  color: #1E4B6F;
   display: inline-block;
   float: right;
-  margin-right: 20px;
+  margin-right: 3em;
+  margin-top: 3em;
+  font-size: 2em;
+  font-weight: bold;
 }
 #greeting span {
   margin-right: .7em;
@@ -72,4 +110,30 @@ figcaption p {
 
 #portfolio {
   clear: both;
+  background-color: #1E4B6F;
+  color: #F3D5BC;
+  border: 2px solid #225F59;
+  border-radius: 15px;
+}
+
+#portfolio h2 {
+  text-align: center;
+  color: #F3D5BC;
+  font-size: 2em;
+  margin-top: .2em;
+}
+
+.highlight img {
+  max-height: 349px;
+  overflow: hidden;
+}
+
+.highlight {
+  text-align: center;
+  margin-left: 8em;
+  margin-right: 8em;
+}
+
+h4 {
+  text-align: center;
 }
