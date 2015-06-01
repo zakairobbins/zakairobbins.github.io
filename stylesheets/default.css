@@ -108,7 +108,7 @@ figcaption p {
   margin-right: .7em;
 }
 
-#portfolio {
+.portfolio {
   margin-top: 1em;
   clear: both;
   background-color: #1E4B6F;
@@ -117,7 +117,7 @@ figcaption p {
   border-radius: 15px;
 }
 
-#portfolio h2 {
+.portfolio h2 {
   text-align: center;
   color: #F3D5BC;
   font-size: 2em;
