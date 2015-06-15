@@ -1,6 +1,6 @@
 body {
     font-family: 'Vollkorn', serif;
-    background-color: #080819;
+    background-color: #070923;
     margin: 2em;
 }
 
@@ -19,24 +19,25 @@ a:hover {
 header {
   background-color: #E4771C;
   border:2px solid #225F59;
+  border-bottom: 1px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
 header h1{
-  color: #080819;
+  color: #070923;
   display: inline-block;
   /*border:1px solid black;*/
   float:left;
-  margin-left: 20px;
+  margin-left: .7em;
 }
 
 header h3 {
-  color: #080819;
+  color: #070923;
   display: inline-block;
   float:right;
   margin-top:32px;
-  margin-right: 20px;
+  margin-right: 1.5em;
 }
 
 nav {
@@ -49,30 +50,36 @@ nav section {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  background-color: #387674;
+  background-color: #225F59;
 }
 
 .nav-links  {
   margin: 0px;
   font-size: 1.5em;
   text-align: center;
+  background-color: #387674;
   flex-grow: 1;
   padding: 0px;
   border: 2px solid #225F59;
+
   border-radius: 4px;
   display: inline-block;
 }
 .nav-links:link {
-  color: #080819;
+  color: #070923;
 }
 .nav-links:visited {
-  color: #080819;
+  color: #070923;
 }
 
 #about-me {
-  display: block;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
   background-color:#F3D5BC;
   border: 2px solid #225F59;
+  border-top: 0px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 28em;
@@ -99,10 +106,12 @@ figcaption p {
   color: #1E4B6F;
   display: inline-block;
   float: right;
-  margin-right: 3em;
+  margin-right: 1.5em;
   margin-top: 3em;
   font-size: 2em;
   font-weight: bold;
+  flex-shrink: 55em;
+  flex-basis: auto;
 }
 #greeting span {
   margin-right: .7em;
@@ -139,12 +148,32 @@ h4 {
   text-align: center;
 }
 
-article {
-  color: #F3D5BC;
-}
+
 
 #blog-title {
   text-align: center;
+}
+
+.b-post-dark {
+  margin-top: 1em;
+  clear: both;
+  background-color: #1E4B6F;
+  color: #F3D5BC;
+  border: 2px solid #225F59;
+  border-radius: 15px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.b-post-light {
+  margin-top: 1em;
+  clear: both;
+  background-color: #F3D5BC;
+  color: #15496D;
+  border: 2px solid #225F59;
+  border-radius: 15px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 /*#badger img {
