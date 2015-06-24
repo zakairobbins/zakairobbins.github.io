@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400,700' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="stylesheets/default.css"/>
     <title>Zakai Robbins</title>
   </head>
@@ -21,6 +21,70 @@
       </nav>
     </header>
     
+    <article class="b-post-light">
+      <h1>Gettin' Classy in Ruby:</h1> 
+      <p>
+        Today we’re talking about classes. An integral part of object oriented design, classes are objects that contain other objects. Classes can hold just about any type of data you can imagine: variables, methods, data structures, even other classes. All the data contained within a class is its own; we use the word “instance” when talking about data belonging to a class. A variable floating around somewhere in the main body of your code is just called a variable, but when a variable is a part of a class, it’s called an “instance variable.” Same thing with instance methods. While data belonging to a class is largely self contained, it can be accessed by outside elements. Classes function similarly to how your body does. Your body is made of a number of self contained elements, like organs, bones, and neurons. While they’re entirely your own, they can be affected by the outside world. If your stomach (a variable in your digestive tract) is hungry, you can access some food to change its state to full. Similarly, your strength is a function of your muscle mass and it’s proportional abilities (equal to 1:1 on a human scale). But, if you were bitten by a radioactive spider, your proportional strength is now changed to 20:1 on a human scale. So let’s take a look at these two classes here: 
+      </p>
+      <p>
+        class Monster<br>
+          &nbsp;&nbsp;attr_reader :hit_value, :defense<br>
+          &nbsp;&nbsp;attr_accessor :health<br>
+          &nbsp;&nbsp;def initialize(health, hit_value, defense)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@health = health<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@hit_value = hit_value<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@defense = defense<br>
+          &nbsp;&nbsp;end<br>
+
+          &nbsp;&nbsp;def attack(target)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;target.health -= (@hit_value - target.defense)<br>
+          &nbsp;&nbsp;end<br>
+          
+          &nbsp;&nbsp;def heal_yourself<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@health += @health + 20<br>
+          &nbsp;&nbsp;end<br>
+        end<br><br>
+
+        class Hero<br>
+          &nbsp;&nbsp;attr_reader :hit_value, :defense<br>
+          &nbsp;&nbsp;attr_accessor :health<br>
+          &nbsp;&nbsp;def initialize(health, hit_value, defense)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@health = health<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@hit_value = hit_value<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; @defense = defense<br>
+          &nbsp;&nbsp;end<br>
+        end<br>
+      </p>
+      <p>
+        Here’s the scenario: a monster in a cave is minding its own business, doing monster stuff one day, when a hero just rolls in out of nowhere and starts looting the cave’s treasure and fighting creatures for XP. The poor monster is caught unawares; it wants no part of this, but the hero readies her shiny sword, preparing to attack. What can the monster do? Let’s take a look inside it’s class: 
+      </p>
+      <p>
+        class Monster<br>
+          &nbsp;&nbsp;attr_reader :hit_value, :defense<br>
+          &nbsp;&nbsp;attr_accessor :health<br>
+          &nbsp;&nbsp;def initialize(health, hit_value, defense)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@health = health<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@hit_value = hit_value<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@defense = defense<br>
+          &nbsp;&nbsp;end<br>
+        </p>
+        <p>
+        Ok, we can see here that the monster, upon birth, was initialized with a value for it’s health, how hard it can hit things, and it’s ability to defend itself. The variables, @health, @hit_value, and @defense are instance variables, the @ sign at the start of their name denotes that. These variables can be used within the monster class to define it’s state, and what it’s methods can do. Don’t worry about that attr_reader / attr_accessor stuff, that’s a topic for a later blog post. Now about those methods: 
+      </p>
+      <p>
+          &nbsp;&nbsp;def attack(target)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;target.health -= (@hit_value - target.defense)<br>
+          &nbsp;&nbsp;end<br>
+          
+          &nbsp;&nbsp;def heal_yourself<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;@health += @health + 20<br>
+          &nbsp;&nbsp;end<br>
+      </p>
+      <p>
+        attack and heal_yourself are instance methods. They define the actions the monster can take, and they rely on it’s instance variables to define their effectiveness. The monster can attack a target, which will result in the target’s own @health instance variable decreasing in value (after their defense is factored in). As long as the object the monster uses it’s attack method on has an @health and @defense instance variable of it’s own, the monster’s attack will happen without issue. It also knows a little magic, so it can cast a healing spell on itself to increase the value of it’s own @health instance variable. With these two methods, we see that classes need instance variables to define their state, and they can use instance methods to affect themselves, and other objects (even other classes) around them. Pretty cool, right? Let’s hope the poor thing does ok against that hero, she looks like she means business…
+      </p>
+    </article>
+
     <article class ="b-post-dark">
       <h1>Coding with Friends</h1>
       <p>
@@ -36,7 +100,7 @@
         From the feedback I’ve received so far, I’ve realized that I need to work on paying attention to my syntax. I tend to get wrapped up in getting my idea down, and miss a comma or an end statement, which leads to wasted time searching back through my code when I inevitably get errors. I’m hoping it’s just a matter of practice, but with all the great people I have to pair with at DBC, I’m sure I can get past it in no time. 
       </p>
     </article>
-    
+
     <article class="b-post-light">
       <h1>The Box Model</h1>
       <p>
