@@ -21,6 +21,8 @@
       </nav>
     </header>
     
+    
+
     <article class="b-post-light">
       <h1>Gettin' Classy in Ruby:</h1> 
       <p>
@@ -98,6 +100,52 @@
       </p>
       <p>
         From the feedback I’ve received so far, I’ve realized that I need to work on paying attention to my syntax. I tend to get wrapped up in getting my idea down, and miss a comma or an end statement, which leads to wasted time searching back through my code when I inevitably get errors. I’m hoping it’s just a matter of practice, but with all the great people I have to pair with at DBC, I’m sure I can get past it in no time. 
+      </p>
+    </article>
+
+    <article class="b-post-light">
+      <h1>Blocs, Procs, and Lambdas: totally simple concepts that anyone can understand.</h1>
+      <p>
+        Haha, sike. blocs, procs, and lambdas are strange, abstract things in Ruby that I’m just barely starting to understand. When used properly, it seems that they can add a lot of dynamic functionality to your programs, but with what I know about coding, I can’t imagine when you would need them. 
+      </p>
+      <p>
+        Let’s start with blocs, the easiest of the three concepts. A bloc is, quite simply, a block of code. A block of code can be as simple as 
+          puts “This is a block of code.”
+        So what if we want to save that block of code, and use it in different places in our program? Well, we could wrap it in a function definition… or: we could store it in a proc. That would look something like this:
+        <p> 
+          &nbsp;&nbsp;p = Proc.new { puts “This is a block of code.” }
+        </p>
+        <p>
+        So now we have a block of code stored in the variable ‘p’, and we call it a proc. Why would we want to do this instead of storing it in a function? Well that’s a great question, probably one for a better programmer than me. But I do know this: you can use procs in the argument lists of other functions, and functions can call procs in place of blocks of code. If that sounds confusing, well… it is. But there are some very creative things you can do through these actions. They just happen to be difficult to explain. 
+      </p>
+      <p>
+        So what’s a lambda? A lambda is a type of proc, with just a few key differences. The most important of which being that lambdas require that they are given the exact amount of arguments as they have in their definition, while procs don’t. Procs are a little less rigid than lambdas.  
+      </p>
+    </article>
+
+    <article class="b-post-dark">
+      <h1>Enumerables</h1>
+      <p>
+        Enumerable is a special class that helps you search, traverse, and sort through collections. While Ruby collections provide their own built in methods to do this, enumerables provide quick ways to do more complex operations. Let’s look at one such enumerable: #map.
+      </p>
+      <p>
+        Map is an enumerable method that will call a block of code for each element in an array, and return a new array of the results. That means that you can create new arrays based on old ones with ease. This is different than the built-in array method #each, in that #map’s return value is a whole new array, while #each’s return value is the original, unchanged array. Let’s look at an example: 
+      </p>
+      <p>
+        &nbsp;&nbsp;(main)> ary = [1, 2, 3]
+
+        &nbsp;&nbsp;(main)> p ary.each {|element| element +1}
+        &nbsp;&nbsp;[1, 2, 3]
+        &nbsp;&nbsp;=> [1, 2, 3]
+
+        &nbsp;&nbsp;(main)> p ary.map {|element| element + 1}
+        &nbsp;&nbsp;[2, 3, 4]
+        &nbsp;&nbsp;=> [2, 3, 4]
+        <p>
+        In this example, we see that for an array containing [1, 2, 3], if we call #each, and add 1 to each element in the array, the return value is just the same array. The code was still run within the loop, but there are no explicit instructions to print the results or store them anywhere. When we look at # map, we see that the code was run, and then the results were stored in a new array. 
+      </p>
+      <p>
+        What does this mean? It means that #each isn’t used for it’s return value. #each is useful for a lot of things, like moving data from one collection to another, or viewing the contents of a collection. #map has a far more useful return value, and so it is generally used to transform data and use the results. 
       </p>
     </article>
 

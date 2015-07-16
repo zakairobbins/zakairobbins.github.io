@@ -1,6 +1,6 @@
 body {
     font-family: Vollkorn, serif;
-    background: url(../imgs/stressed_linen_@2X.png) #070923;
+    background: url(../imgs/wood_1.png) #070923;
     background-origin: content-box;
     background-repeat: repeat;
     margin: 2em;
@@ -24,6 +24,7 @@ header {
   border-bottom: 1px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  /*box-shadow: 0em -.05em .05em .05em #D4670C;*/
 }
 
 header h1{
@@ -79,16 +80,20 @@ nav section {
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
-  background: #F3D5BC;
+  background-image: linear-gradient(
+    #E4771C 50%, 
+    #F3D5BC);
   border: 2px solid #225F59;
   border-top: 0px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 28em;
+ /* box-shadow: 0em .05em .05em .05em #D4670C;*/
 }
 #about-me img {
   max-height: 349px;
   overflow: hidden;
+
 }
 
 #about-me figure {
@@ -122,7 +127,9 @@ figcaption p {
 .portfolio {
   margin-top: 1em;
   clear: both;
-  background-color: #1E4B6F;
+  background-image: linear-gradient(
+    #1E4B6F 70%, 
+    #F3D5BC);
   color: #F3D5BC;
   border: 2px solid #225F59;
   border-radius: 15px;
@@ -185,3 +192,31 @@ h4 {
   overflow: hidden;
   display: block;
 }*/
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  float: center;
+  margin: 1em;
+  border: 2px solid #225F59;
+  color: #E4771C;
+  font-size: 4em;
+  font-weight: bold;
+
+}
+.links td {
+  text-align: center;
+  display: inline-block;
+  margin: 1em;
+  border: 2px solid #225F59;
+  flex-grow: 1;
+
+  /*top: 2em;*/
+  /*float: right;*/
+  /*border-radius: 2em;*/
+}
+
+
+

@@ -24,7 +24,6 @@ class Monster
   def heal_yourself
   	@health += @health + 20
   end
-
 end
 
 dude = Hero.new(100, 50, 5)
