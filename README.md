@@ -1,2 +1,2 @@
 # zakairobbins.github.io
-My DBC phase 0 github pages site
+My personal portfolio. Check out some of my work and get in touch. Let's collaborate!
