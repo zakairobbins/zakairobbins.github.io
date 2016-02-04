@@ -10,4 +10,8 @@ body {
   color: blue;
   text-align: center;
   height: 50em;
+  margin-top: 10em;
+}
+h1 {
+  height: 15em;
 }
