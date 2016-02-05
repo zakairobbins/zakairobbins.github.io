@@ -1,17 +1,68 @@
 body {
-  font-family: Vollkorn, serif;
+  font-family: 'Antic Didone', serif;
   background: url(../imgs/desert_sunset.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-.header {
-  color: blue;
-  text-align: center;
-  height: 50em;
-  margin-top: 10em;
+.container {
+  width: 90%;
+  height: 95%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
-h1 {
-  height: 15em;
+.header {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1.2em;
+  color: #D05F21;
+}
+.header h1 {
+  margin: 0;
+}
+.header h2 {
+  margin: .25em;
+  font-family: 'Antic Didone', serif;
+}
+.portfolio {
+  text-align: center;
+  margin-top: 17em;
+}
+.portfolio h1 {
+  color: #347A91;
+  text-shadow: 0px -1px 1px blue;
+}
+
+.sample {
+  color: #1A2D33;
+  height: 30em;
+  width: 30em;
+  padding: 1em;
+  display: inline-block;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(208, 95, 33, 1), rgba(208, 95, 33, 0.9), rgba(208, 95, 33, 0.8));
+  background: -webkit-radial-gradient(circle, rgba(208, 95, 33, 1), rgba(208, 95, 33, 0.9), rgba(208, 95, 33, 0.8));
+  background: -o-radial-gradient(circle, rgba(208, 95, 33, 1), rgba(208, 95, 33, 0.9), rgba(208, 95, 33, 0.8));
+  background: -moz-radial-gradient(circle, rgba(208, 95, 33, 1), rgba(208, 95, 33, 0.9), rgba(208, 95, 33, 0.8));
+  box-shadow: 0px 0px 8px 5px rgba(208, 95, 33, 0.8), 0px 0px 16px 5px rgba(208, 95, 33, 0.4), 0px 0px 24px 5px rgba(208, 95, 33, 0.4);
+}
+
+.sample img {
+  width: 70%;
+  object-fit: contain;
+  box-shadow: 0px 0px 8px 5px rgba(208, 95, 33, 0.1), 0px 0px 16px 5px rgba(208, 95, 33, 0.1);
+  border-radius: 10px;
+}
+
+.vertical-pic {
+  height: 11em;
+}
+
+.debug {
+  border: 1px solid red;
 }
