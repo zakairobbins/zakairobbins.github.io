@@ -15,6 +15,7 @@ body {
 .header {
   text-align: center;
   margin-top: 2em;
+  margin-bottom: 13em;
   font-size: 1.2em;
   color: #D05F21;
 }
@@ -27,7 +28,6 @@ body {
 }
 .portfolio {
   text-align: center;
-  margin-top: 17em;
 }
 .portfolio h1 {
   color: #347A91;
@@ -65,4 +65,35 @@ body {
 
 .debug {
   border: 1px solid red;
+}
+
+.contact {
+  margin-bottom: 12em;
+
+}
+
+.contact * {
+  color: #D05F21;
+  text-align: center;
+}
+
+.contact a:link {
+  text-decoration: none;
+}
+
+.pods {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.contact-pod {
+  display: inline-block;
+  height: 2em;
+  width: 29%;
+  margin-top: 0em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
 }
